@@ -16,27 +16,11 @@ class Validator(ABC):
 
 class RegexEmployeesJsonDataValidator(Validator):
 
-    def validate(self, json_data: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
-        employees_constrains = {
-            'userId': '^[E]\d+$',
-            'name': '^[A-Z]+$',
-            'surname': '^[A-Z]+$',
-            'job': '^[A-Z]+$',
-            'age': '^\d+$',
-            'experience': '^\d+$',
-            'salary': '^\d+\.\d{2}$',
-            'rating': '^\d+\.\d{1}$',
-            'email': '^[\w\.-]+@[\w\.-]+\.\w+$',
-            'companyId': '^[C]\d+$'
-        }
+    def validate(self, json_data: dict[str, Any]) -> dict[str, Any]:
 
         errors = {}
 
-        # for data in json_data['employees']:
-        #     # print(data)
-        #     for k, v in data.items():
-                # print(f'K {k} v {v}')
-        if not json_data['employees']['userId']:
+        if not json_data['userId']:
             errors['userId'] = 'Employee json data must contain id'
         elif not re.match(r'^[E]\d+$', json_data['userId']):
             errors['userId'] = 'Employee id must be a number'
@@ -56,7 +40,7 @@ class RegexEmployeesJsonDataValidator(Validator):
         if not json_data['job']:
             errors['job'] = 'Employee json data must contain job name'
         elif not re.match(r'^[A-Z]+$', json_data['job']):
-            errors['surname'] = 'Employee job name must contain only upper letters'
+            errors['job'] = 'Employee job name must contain only upper letters'
             # str(data['job']).upper()
 
         if not json_data['age']:
@@ -93,15 +77,12 @@ class RegexEmployeesJsonDataValidator(Validator):
         if not json_data['companyId']:
             errors['companyId'] = 'Employee json data must contain companyId'
         elif not re.match(r'^[C]\d+$', json_data['companyId']):
-            errors['companyId'] = 'Employee email must be a string'
+            errors['companyId'] = 'Employee company ID must be a string'
 
         if len(errors) != 0:
             raise ValueError(errors_to_str(errors))
 
         return json_data
-
-
-
 
 
 def errors_to_str(errors: dict[str, str]) -> str:
