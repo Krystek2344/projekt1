@@ -1,0 +1,12 @@
+employees_constrains = {
+        'userId': '^[E]\d+$',
+        'name': '^[a-zA-Z]+$',
+        'surname': '^[a-zA-Z]+$',
+        'job': '^[a-zA-Z]+$',
+        'age': '^\d+$',
+        'experience': '^\d+$',
+        'salary': '^\d+\.\d{2}$',
+        'rating': '^\d+\.\d{1}$',
+        'email': '^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+        'companyId': '^[C]\d+$'
+    }

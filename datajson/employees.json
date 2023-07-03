@@ -1,0 +1,52 @@
+{
+  "employees": [
+    {
+      "userId": "E1",
+      "name": "Adam",
+      "surname": "Kowalski",
+      "job": "Developer",
+      "age": "20",
+      "experience": "4",
+      "salary": "3000.00",
+      "rating": "4",
+      "email": "a.kow@mail.com",
+      "companyId": "C1"
+    },
+    {
+      "userId": "E2",
+      "name": "Monika",
+      "surname": "Kowalska",
+      "job": "Ksiegowa",
+      "age": "34",
+      "experience": "4",
+      "salary": "4500",
+      "rating": "6",
+      "email": "m.kowala@mail.com",
+      "companyId": "C2"
+    },
+    {
+      "userId": "E3",
+      "name": "Tomasz",
+      "surname": "Zetowski",
+      "job": "Stolarz",
+      "age": "33",
+      "experience": "2",
+      "salary": "2000",
+      "rating": "5",
+      "email": "t.zeto@mail.com",
+      "companyId": "C1"
+    },
+    {
+      "userId": "E4",
+      "name": "Lidia",
+      "surname": "Obrazowa",
+      "job": "Prawnik",
+      "age": "46",
+      "experience": "12",
+      "salary": "30000",
+      "rating": "9",
+      "email": "lobraz@mail.com",
+      "companyId": "C3"
+    }
+  ]
+}

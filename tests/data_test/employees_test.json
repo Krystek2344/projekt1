@@ -1,0 +1,16 @@
+{
+  "employees": [
+    {
+      "userId": "ET1",
+      "name": "ADAM",
+      "surname": "Kowalski",
+      "job": "",
+      "age": "20",
+      "experience": "1",
+      "salary": "3000",
+      "rating": "4",
+      "email": "a.kowmail.com",
+      "companyId": "C1"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "companies": [
+    {
+      "companyId": "C1",
+      "name": "Alpha",
+      "addressId": "CA1"
+    },
+    {"companyId": "C2",
+      "name": "Bravo",
+      "addressId": "CA2"
+    },
+    {
+      "companyId": "C3",
+      "name": "Charlie",
+      "addressId": "CA3"
+    }
+  ]
+}

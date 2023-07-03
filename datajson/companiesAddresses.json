@@ -1,0 +1,25 @@
+{
+  "companiesAddresses": [
+    {
+      "addressId": "CA1" ,
+      "city": "Warszawa",
+      "street": "Firmowa",
+      "number": "1A",
+      "country": "Polska"
+    },
+    {
+      "addressId": "CA2" ,
+      "city": "Berlin",
+      "street": "Warsau",
+      "number": "145",
+      "country": "Niemcy"
+    },
+    {
+      "addressId": "CA3" ,
+      "city": "Kraków",
+      "street": "Krakowska",
+      "number": "13/34",
+      "country": "Polska"
+    }
+  ]
+}
