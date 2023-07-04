@@ -9,9 +9,10 @@ def main() -> None:
     employees_data = JsonDataLoader().load('../datajson/employees.json')
 
 
-    emp1 = employees_data['employees'][0]
+    emp1 = len(employees_data['employees'])
     # print(RegexEmployeesJsonDataValidator().validate(employees_data['employees'][0]))
-    RegexEmployeesJsonDataValidator().validate(emp1)
+    # RegexEmployeesJsonDataValidator().validate(emp1)
+    print(emp1)
 
 if __name__ == '__main__':
     main()

@@ -14,6 +14,7 @@ class Validator(ABC):
 #     Czy lepiej zrobiź sobie tak jak w przypadku employees_constrains i wywalić regexy (companies, employees i address)
 #     do pliku i wyciągać sobie regexy i wyszukiwać po kluczu? Walidacja maila?
 
+
 class RegexEmployeesJsonDataValidator(Validator):
 
     def validate(self, json_data: dict[str, Any]) -> dict[str, Any]:
@@ -56,7 +57,7 @@ class RegexEmployeesJsonDataValidator(Validator):
         if not json_data['salary']:
             errors['salary'] = 'Employee json data must contain salary'
         elif not re.match(r'^\d+\.\d{2}$', json_data['salary']):
-            # round(float(data['salary']), 1)
+            # round(float(json_data['salary']), 1)
             errors['salary'] = 'Customer salary must be a float number'
 
         if not json_data['rating']:
@@ -80,11 +81,14 @@ class RegexEmployeesJsonDataValidator(Validator):
             errors['companyId'] = 'Employee company ID must be a string'
 
         if len(errors) != 0:
-            raise ValueError(errors_to_str(errors))
+            raise ValueError(self._errors_to_str(errors))
 
         return json_data
 
+    def _errors_to_str(self, errors: dict[str, str]) -> str:
+        return ', '.join([f'{k}: {v}' for k, v in errors.items()])
 
-def errors_to_str(errors: dict[str, str]) -> str:
-    return ', '.join([f'{k}: {v}' for k, v in errors.items()])
+    @staticmethod
+    def check_json_employee_file_data_with_regex(json_file_data: dict[str, list[dict[str, Any]]]) -> dict[str, list[dict[str, Any]]]:
+        pass
 

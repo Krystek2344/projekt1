@@ -10,3 +10,7 @@ class TestRegexEmployeesJsonDataValidator:
 
         assert test_data['userId'] == 'ET1'
         assert test_data['companyId'] == 'C1'
+
+    def test_check_json_file_data_with_regex(self):
+        test_data = JsonDataLoader().load('tests/data_test/employees_test.json')
+
