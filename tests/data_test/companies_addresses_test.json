@@ -1,0 +1,11 @@
+{
+  "companiesAddresses": [
+    {
+      "addressId": "CA1",
+      "city": "Warszawa",
+      "street": "Firmowa",
+      "number": "1A",
+      "country": "Polska"
+    }
+  ]
+}

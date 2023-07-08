@@ -1,0 +1,9 @@
+{
+  "companies": [
+    {
+      "companyId": "CT1",
+      "name": "AlphaT",
+      "addressId": "CAT1"
+    }
+  ]
+}

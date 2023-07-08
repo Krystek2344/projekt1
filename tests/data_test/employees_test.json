@@ -3,13 +3,13 @@
     {
       "userId": "ET1",
       "name": "ADAM",
-      "surname": "Kowalski",
-      "job": "",
+      "surname": "Kowal",
+      "job": "Dev",
       "age": "20",
       "experience": "1",
       "salary": "3000",
       "rating": "4",
-      "email": "a.kowmail.com",
+      "email": "kow@mail.com",
       "companyId": "C1"
     }
   ]

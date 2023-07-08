@@ -9,11 +9,6 @@ class Validator(ABC):
     def validate(self, json_data: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
         pass
 
-# todo.1 Postarać się wyznaczyć metodę do ogarnięcia podwajających się sprawdzeń (napisy). Czy jest to
-#     dobra praktyka, żeby tyle sprawdzeń robić (na całym pliku) - co jak będzie kilkaset wierszy/pozycji??
-#     Czy lepiej zrobiź sobie tak jak w przypadku employees_constrains i wywalić regexy (companies, employees i address)
-#     do pliku i wyciągać sobie regexy i wyszukiwać po kluczu? Walidacja maila?
-
 
 class RegexEmployeesJsonDataValidator(Validator):
 
@@ -30,19 +25,16 @@ class RegexEmployeesJsonDataValidator(Validator):
             errors['name'] = 'Employee json data must contain name'
         elif not re.match(r'^[A-Z]+$', json_data['name']):
             errors['name'] = 'Employee name must contain only upper letters'
-            # str(data['name']).upper()
 
         if not json_data['surname']:
             errors['surname'] = 'Employee json data must contain surname'
         elif not re.match(r'^[A-Z]+$', json_data['surname']):
             errors['surname'] = 'Employee surname must contain only upper letters'
-            # str(data['surname']).upper()
 
         if not json_data['job']:
             errors['job'] = 'Employee json data must contain job name'
         elif not re.match(r'^[A-Z]+$', json_data['job']):
             errors['job'] = 'Employee job name must contain only upper letters'
-            # str(data['job']).upper()
 
         if not json_data['age']:
             errors['age'] = 'Employee json data must contain age'
@@ -57,7 +49,6 @@ class RegexEmployeesJsonDataValidator(Validator):
         if not json_data['salary']:
             errors['salary'] = 'Employee json data must contain salary'
         elif not re.match(r'^\d+\.\d{2}$', json_data['salary']):
-            # round(float(json_data['salary']), 1)
             errors['salary'] = 'Customer salary must be a float number'
 
         if not json_data['rating']:

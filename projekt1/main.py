@@ -6,13 +6,13 @@ import re
 
 def main() -> None:
 
+    # employees_data = JsonDataLoader().load('../tests//data_test/employees_test.json')
     employees_data = JsonDataLoader().load('../datajson/employees.json')
 
 
-    emp1 = len(employees_data['employees'])
-    # print(RegexEmployeesJsonDataValidator().validate(employees_data['employees'][0]))
-    # RegexEmployeesJsonDataValidator().validate(emp1)
-    print(emp1)
+    emp1 = employees_data
+    print(emp1['employees'][0])
+
 
 if __name__ == '__main__':
     main()

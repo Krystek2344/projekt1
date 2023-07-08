@@ -19,6 +19,3 @@ class TestJsonDataLoaderWithIncorrectContent:
         result = JsonDataLoader().load('tests/data_test/employees_test.json')
         assert 1 == len(result)
         assert 'employees' in result
-
-
-#         25:21 nagranie Krzysiek
